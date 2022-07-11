@@ -31,11 +31,7 @@
 #include <Wire.h>
 
 void setup() {
-#ifdef _ESP32_HAL_I2C_H_
-  Wire.begin(26,25);
-#else
   Wire.begin();
-#endif
 
   Serial.begin(115200);
   while (!Serial); // Wait for starting serial monitor
